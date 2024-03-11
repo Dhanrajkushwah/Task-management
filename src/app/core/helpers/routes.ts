@@ -38,6 +38,9 @@ export class routes {
   public static get dashboardadmin(): string {
     return this.core + '/admin/dashboard';
   }
+  public static get taskadmin(): string {
+    return this.core + '/admin/task';
+  }
   public static get dashboardclient(): string {
     return this.core + '/client/dashboard';
   }

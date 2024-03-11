@@ -1415,6 +1415,17 @@ export class SidebarService {
           subMenus: [],
         },
 
+        // {
+        //   menuValue: 'Total Task',
+        //   route: routes.services,
+        //   hasSubRoute: false,
+        //   showSubRoute: false,
+        //   icon: 'plus-square',
+        //   subMenus: [],
+        // },
+
+
+
         {
           menuValue: 'Total Task',
           route: routes,
