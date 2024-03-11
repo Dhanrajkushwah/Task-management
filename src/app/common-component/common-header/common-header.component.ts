@@ -40,7 +40,6 @@ export class CommonHeaderComponent implements OnInit {
     private sidebar: SidebarService,
     private webStorage: WebstorgeService,
     private _profileData: ServiceService,
-    // private service: CompanyService
   ) {
 
     this.activePath = this.Router.url.split('/')[2];
@@ -71,10 +70,6 @@ export class CommonHeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-    // const id= sessionStorage.getItem("superadmin_id");
-    // console.log(id, "*****")
-
     console.log();
     Feather.replace();
     this.profile();
@@ -90,7 +85,6 @@ export class CommonHeaderComponent implements OnInit {
       this._profileData.GetProfile(admin_id).subscribe({
         next: (res) => {
           this.data = res;
-          this.img = this.data.image
           this.role = this.data.role
           this.name = this.data.firstname + " " + this.data.lastname
         },

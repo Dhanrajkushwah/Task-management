@@ -10,7 +10,7 @@ import { AdminService } from 'src/app/services/admin-service';
   styleUrls: ['./task.component.scss']
 })
 export class TaskComponent {
-  displayedColumns: string[] = ['sno', 'name','department', 'age','doctorName','date' ,'action' ];
+  displayedColumns: string[] = ['sno', 'name','time', 'category','subcategory','action' ];
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;

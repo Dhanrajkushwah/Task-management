@@ -14,10 +14,10 @@ export class AdminService {
   ) { }
 
   addTask(data: any) {
-    return this._http.post<any>(environment._api + "/api/admin/task", data)
+    return this._http.post<any>(environment._api + "/api/task", data)
   }
   getTask() {
-    return this._http.get<any>(environment._api + "/api/admin/admin")
+    return this._http.get<any>(environment._api + "/api/task")
   }
 
   addCompanyRegistration(data: any) {

@@ -12,25 +12,30 @@ export class AddTaskComponent implements OnInit {
   addTaskForm !: FormGroup;
   ckForm = false;
   removeClass = true;
-  imgs!: File;
+  document!: File;
   imagesBox = '../../../../../../assets/img/product/product1.jpg'
-  cid: any;
+  admin_id
   companybyIdData: any
   constructor(
     private _fb: FormBuilder,
     private adminservice: AdminService,
     private _routes: Router,
-  ) { }
+  ) { 
+    this.admin_id = sessionStorage.getItem("admin_id");
+
+  }
 
   ngOnInit(): void {
     this.addTaskForm = this._fb.group({
-      tittle: ['', Validators.required],
+      title: ['', Validators.required],
       category: ['', Validators.required],
-      subcategory: ['', Validators.required],
+      subCategory: ['', Validators.required],
       taskTime:['', Validators.required],
       price:['', Validators.required],
       description:['', Validators.required],
       descriptionFile:[''],
+      companyId:[this.admin_id],
+     
     });
    
 
@@ -38,8 +43,7 @@ export class AddTaskComponent implements OnInit {
 
   Onupload(event: any) {
     if (event.target.files.length > 0) {
-      this.imgs = event.target.files[0];
-      console.log(this.imgs)
+      this.document = event.target.files[0];
     }
     if (event.target.files && event.target.files[0]) {
       const filesAmount = event.target.files.length;
@@ -56,7 +60,6 @@ export class AddTaskComponent implements OnInit {
     }
 
   }
-
  
 
   onSubmit() {
@@ -66,16 +69,16 @@ export class AddTaskComponent implements OnInit {
     } else {
       try {
         let formData = new FormData();
-        formData.append('descriptionFile', this.imgs)
-        const arr = ['tittle', 'category', 'subcategory','taskTime','price','description',]
+        formData.append('descriptionFile', this.document)
+        const arr = ['title', 'category', 'subCategory','taskTime','price','description','companyId']
         for (let key of arr) {
           formData.append(key, this.addTaskForm.get(key)?.value)
         }
         this.adminservice.addTask(formData).subscribe({
           next: (res) => {
-            if (res) {
+      
               this._routes.navigate(['/admin/task'])
-            }
+     
           },
           error: (err) => {
             console.log(err)

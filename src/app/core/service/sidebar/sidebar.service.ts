@@ -1432,28 +1432,6 @@ export class SidebarService {
           icon: 'users',
           subMenus: [],
         },
-    
-        // {
-        //   menuValue: 'Total Task',
-        //   route: routes.services,
-        //   hasSubRoute: false,
-        //   showSubRoute: false,
-        //   icon: 'plus-square',
-        //   subMenus: [],
-        // },
-       
-      
-
-        {
-          menuValue: 'Total Task',
-          route: routes,
-          hasSubRoute: false,
-          showSubRoute: false,
-          icon: 'plus-square',
-          subMenus: [],
-        },
-
-
         {
           menuValue: 'Rating',
           route: routes,

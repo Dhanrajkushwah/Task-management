@@ -11,8 +11,8 @@
           <div class="col-lg-4 col-sm-6 col-12">
             <div class="form-group">
               <label>Tittle</label>
-              <input type="text" formControlName="tittle" placeholder="Enter Tittle" />
-              <small *ngIf="addTaskForm.controls['tittle'].errors && ckForm" class="text-danger">Enter Your Tittle
+              <input type="text" formControlName="title" placeholder="Enter Tittle" />
+              <small *ngIf="addTaskForm.controls['title'].errors && ckForm" class="text-danger">Enter Your Tittle
               </small>
             </div>
           </div>
@@ -27,8 +27,8 @@
           <div class="col-lg-4 col-sm-6 col-12">
             <div class="form-group">
               <label>Sub-Category</label>
-              <input type="text" formControlName="subcategory" placeholder="Enter Sub-Category" />
-              <small *ngIf="addTaskForm.controls['subcategory'].errors && ckForm" class="text-danger">Enter Your Sub-Category
+              <input type="text" formControlName="subCategory" placeholder="Enter Sub-Category" />
+              <small *ngIf="addTaskForm.controls['subCategory'].errors && ckForm" class="text-danger">Enter Your Sub-Category
               </small>
             </div>
           </div>
@@ -51,7 +51,7 @@
           <div class="col-lg-4 col-sm-6 col-12">
             <div class="form-group">
               <label>Document Upload (optional)</label>
-              <input type="file" class="form-control" formControlName="descriptionFile" placeholder="Enter Document File" />
+              <input type="file" (change)="Onupload($event)" class="form-control" formControlName="descriptionFile" placeholder="Enter Document File" />
             </div>
           </div>
         </div>
