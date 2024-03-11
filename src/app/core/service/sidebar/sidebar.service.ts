@@ -1423,18 +1423,9 @@ export class SidebarService {
         //   ],
         // },
 
-         {
-          menuValue: 'Registration',
-          route: routes,
-          hasSubRoute: false,
-          showSubRoute: false,
-          icon: 'calendar',
-          subMenus: [],
-        },
-
         {
           menuValue: 'Task Management',
-          route: routes,
+          route: routes.taskadmin,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'users',
