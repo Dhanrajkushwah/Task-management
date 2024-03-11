@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth.component';
-
-
-
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
 const routes: Routes = [
   { path: '', redirectTo: 'signin', pathMatch: 'full' },
   {
@@ -27,15 +25,15 @@ const routes: Routes = [
             (m) => m.ForgetpasswordModule
           ),
       },
-      
+
       // {
       //   path: 'staffregister',
       //   component :StaffRegisterComponent
       // },
-      // {
-      //   path: 'patientegister',
-      //   component :PatientRegisterComponent
-      // }
+      {
+        path: 'userregister',
+        component :UserRegistrationComponent
+      }
     ],
   },
 ];
