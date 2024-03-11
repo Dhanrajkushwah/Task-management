@@ -1422,7 +1422,7 @@ export class SidebarService {
         //      }
         //   ],
         // },
-      
+
 
         {
           menuValue: 'Task Management',
@@ -1432,7 +1432,7 @@ export class SidebarService {
           icon: 'users',
           subMenus: [],
         },
-    
+
         // {
         //   menuValue: 'Total Task',
         //   route: routes.services,
@@ -1441,8 +1441,8 @@ export class SidebarService {
         //   icon: 'plus-square',
         //   subMenus: [],
         // },
-       
-      
+
+
 
         {
           menuValue: 'Total Task',
@@ -1503,6 +1503,14 @@ export class SidebarService {
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'calendar',
+          subMenus: [],
+        },
+        {
+          menuValue: 'Services',
+          route: routes.Users,
+          hasSubRoute: false,
+          showSubRoute: false,
+          icon: 'hard-drive',
           subMenus: [],
         },
 

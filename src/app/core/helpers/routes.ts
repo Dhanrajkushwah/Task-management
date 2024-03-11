@@ -4,6 +4,7 @@ export class routes {
   }
   private static base = '';
   private static SuperAdmin = '/super-admin';
+  private static User = '/user';
   // private static base = '';
 
 
@@ -25,6 +26,13 @@ export class routes {
   }
   public static get forgotPassword(): string {
     return this.base + '/forgetpassword';
+  }
+
+
+  //--------------User Routes----------->
+
+  public static get Users(): string {
+    return this.User + '/seviceslist';
   }
 
 

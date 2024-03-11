@@ -6,10 +6,12 @@ import { CommonHeaderComponent } from 'src/app/common-component/common-header/co
 import { CommonLayoutComponent } from 'src/app/common-component/common-layout/common-layout.component';
 import { CommonSidebarOneComponent } from 'src/app/common-component/common-sidebar-one/common-sidebar-one.component';
 import { MaterialModule } from 'src/app/shared/material/material.module';
+import { ServicesListComponent } from './components/pages/services-list/services-list.component';
 
 @NgModule({
   declarations: [
     UserComponent,
+    ServicesListComponent,
   ],
   imports: [
     CommonModule,
