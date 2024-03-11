@@ -5,6 +5,7 @@ import { CompanyRegistrationComponent } from './company-registration/company-reg
 
 
 
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
 const routes: Routes = [
   { path: '', redirectTo: 'signin', pathMatch: 'full' },
   {
@@ -32,15 +33,15 @@ const routes: Routes = [
         path: 'companyregister',
         component :CompanyRegistrationComponent
       }
-      
+      ,
       // {
       //   path: 'staffregister',
       //   component :StaffRegisterComponent
       // },
-      // {
-      //   path: 'patientegister',
-      //   component :PatientRegisterComponent
-      // }
+      {
+        path: 'userregister',
+        component :UserRegistrationComponent
+      }
     ],
   },
 ];

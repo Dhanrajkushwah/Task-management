@@ -22,7 +22,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { AngularSignaturePadModule } from '@almothafar/angular-signature-pad';
-import { ExcelService } from './services/excel/excel.service';
+// import { ExcelService } from './services/excel/excel.service';
 
 @NgModule({
   declarations: [
@@ -47,9 +47,9 @@ import { ExcelService } from './services/excel/excel.service';
     NgApexchartsModule,
     AngularSignaturePadModule
 
-    
+
   ],
-  providers: [ExcelService]
+  // providers: [ExcelService]
 
 })
 export class SuperAdminModule { }
