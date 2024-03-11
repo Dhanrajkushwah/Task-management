@@ -58,7 +58,7 @@ export class SidebarService {
         },
         {
           menuValue: 'Company Management',
-          route: routes,
+          route: routes.company,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'calendar',
@@ -107,7 +107,7 @@ export class SidebarService {
         },
         {
           menuValue: 'Category',
-          route: routes,
+          route: routes.category,
           page: 'add-brand',
           page2: 'edit-brand',
           hasSubRoute: false,
@@ -1423,10 +1423,18 @@ export class SidebarService {
         //   ],
         // },
 
+         {
+          menuValue: 'Registration',
+          route: routes,
+          hasSubRoute: false,
+          showSubRoute: false,
+          icon: 'calendar',
+          subMenus: [],
+        },
 
         {
           menuValue: 'Task Management',
-          route: routes.taskadmin,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'users',
