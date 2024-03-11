@@ -9,7 +9,7 @@ import { ServiceService } from 'src/app/auth/authservice/service.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { CompanyService } from 'src/app/component/super-admin/services/company.service';
+// import { CompanyService } from 'src/app/component/super-admin/services/company.service';
 
 @Component({
   selector: 'app-common-header',
@@ -40,7 +40,7 @@ export class CommonHeaderComponent implements OnInit {
     private sidebar: SidebarService,
     private webStorage: WebstorgeService,
     private _profileData: ServiceService,
-    private service: CompanyService
+    // private service: CompanyService
   ) {
 
     this.activePath = this.Router.url.split('/')[2];
@@ -71,14 +71,14 @@ export class CommonHeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+
     // const id= sessionStorage.getItem("superadmin_id");
     // console.log(id, "*****")
 
     console.log();
     Feather.replace();
     this.profile();
- 
+
   }
 
   profile() {

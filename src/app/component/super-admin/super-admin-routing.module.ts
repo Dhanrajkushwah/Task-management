@@ -16,12 +16,14 @@ const routes: Routes = [
         loadChildren: () =>
           import('../../core-component/dashboard/dashboard.module').then((m) => m.DashboardModule),
       },
- 
       {
-        path : 'company/add' ,
-        component : AddCompanyComponent   
-      },
-      
+        path : 'company',
+        loadChildren :()=> import('../super-admin/component/pages/company/company.module').then((c)=>c.CompanyModule),
+
+      }
+
+
+
     ],
   },
 ];

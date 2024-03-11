@@ -6,7 +6,7 @@ import { routes } from '../../core.index';
   providedIn: 'root',
 })
 export class SidebarService {
- 
+
   public sideBarPosition: BehaviorSubject<string> = new BehaviorSubject<string>(
     localStorage.getItem('sideBarPosition') || 'false'
   );
@@ -58,7 +58,7 @@ export class SidebarService {
         },
         {
           menuValue: 'Company Management',
-          route: routes.appointmentList,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'calendar',
@@ -83,7 +83,7 @@ export class SidebarService {
         // },
         {
           menuValue: 'User Management',
-          route: routes.clinicList,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'layout',
@@ -91,7 +91,7 @@ export class SidebarService {
         },
         {
           menuValue: 'Deactivated Company',
-          route: routes.patientList,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'users',
@@ -99,7 +99,7 @@ export class SidebarService {
         },
         {
           menuValue: 'Deactivated User',
-          route: routes.doctorList,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'user-check',
@@ -107,7 +107,7 @@ export class SidebarService {
         },
         {
           menuValue: 'Category',
-          route: routes.receptionistAdd,
+          route: routes,
           page: 'add-brand',
           page2: 'edit-brand',
           hasSubRoute: false,
@@ -117,7 +117,7 @@ export class SidebarService {
         },
         {
           menuValue: 'Sub-Category',
-          route: routes.services,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'globe',
@@ -196,7 +196,7 @@ export class SidebarService {
         //      }
         //   ],
         // },
-        
+
         // {
         //   menuValue: 'Settings',
         //   route: routes.setting,
@@ -316,7 +316,7 @@ export class SidebarService {
         //   icon: 'tag',
         //   subMenus: [],
         // },
-        
+
         // {
         //   menuValue: 'Staff',
         //   route: routes.Staff,
@@ -1382,7 +1382,7 @@ export class SidebarService {
     //   ],
     // },
   ];
- 
+
   public sidebarData2 = [
     {
       tittle: 'Admin',
@@ -1399,51 +1399,35 @@ export class SidebarService {
         },
          {
           menuValue: 'Registration',
-          route: routes.appointmentList,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'calendar',
           subMenus: [],
         },
-        // {
-        //   menuValue: 'Encounters',
-        //   route: routes.encounterTemplateList,
-        //   hasSubRoute: true,
-        //   showSubRoute: false,
-        //   icon: 'x-square',
-        //   subMenus: [
-        //     {
-        //       menuValue: 'Encounters List',
-        //       route: routes.encounterTemplateList,
-        //      },
-        //      {
-        //       menuValue: 'Encounter Templates',
-        //      route: routes.PatientencounterTemplate,
-        //      }
-        //   ],
-        // },
+
         {
           menuValue: 'Task Management',
-          route: routes.patientList,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'users',
           subMenus: [],
         },
-    
+
         {
           menuValue: 'Total Task',
-          route: routes.services,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'plus-square',
           subMenus: [],
         },
-       
-      
+
+
         {
           menuValue: 'Rating',
-          route: routes.invoice,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'edit',
@@ -1451,7 +1435,7 @@ export class SidebarService {
         },
         {
           menuValue: 'Profile',
-          route: routes.holidays,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'arrow-down-circle',
@@ -1459,7 +1443,7 @@ export class SidebarService {
         },
         {
           menuValue: 'Complete Task',
-          route: routes.doctorsession,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'award',
@@ -1467,7 +1451,7 @@ export class SidebarService {
         },
       ],
     },
-  
+
   ];
 
   public sidebarUser = [
@@ -1478,7 +1462,7 @@ export class SidebarService {
       menu: [
         {
           menuValue: 'Dashboard',
-          route: routes.dashboard,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'grid',
@@ -1486,16 +1470,16 @@ export class SidebarService {
         },
         {
           menuValue: 'Registration',
-          route: routes.appointmentList,
+          route: routes,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'calendar',
           subMenus: [],
         },
-      
+
       ],
     },
-  
+
   ];
 
 
