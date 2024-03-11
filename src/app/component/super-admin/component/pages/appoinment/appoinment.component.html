@@ -1,0 +1,164 @@
+<div class="mb-4">
+    <h2 class=" m-0">Create New Appointment</h2>
+    <span style="cursor: pointer;" (click)="cancelCoupan()"><i class="fa fa-arrow-left"></i> Appointment List</span>
+</div>
+<div></div>
+<div class="card mt-3">
+    <form [formGroup]="appointmentForm">
+        <div class="card-body">
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for=""> Select Clinic <span class="mandatory">*</span></label>
+                                <select name="" id="" class="form-control" formControlName="selectClinic"
+                                (change)="clinicChange($event)"  [ngClass]="{'is-invalid':checkForm && appointmentForm.controls['selectClinic'].errors}">
+                                    <option value="">Select Clinic</option>
+                                    <option *ngFor="let c of allClinic"  >{{c.name}}</option>
+        
+                                </select>
+                                <small *ngIf="checkForm && appointmentForm.controls['selectClinic'].errors"
+                                    class="text-danger">Please select clinic Name</small>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="">Doctor <span class="mandatory">*</span></label>
+                                <select name="" id="" class="form-control" formControlName="doctorName"
+                                    (change)="doctorChange($event)"
+                                    [ngClass]="{'is-invalid':checkForm && appointmentForm.controls['doctorName'].errors}">
+                                    <option value="" disabled>Select Doctor</option>
+                                    <option *ngFor="let d of allDoctor">{{d}}</option>
+                                </select>
+                                <small *ngIf="checkForm && appointmentForm.controls['doctorName'].errors"
+                                    class="text-danger">Please Enter
+                                    Doctor Name</small>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="">Service <span class="mandatory">*</span></label>
+                                <select class="form-control" formControlName="service"
+                                    [ngClass]="{'is-invalid':checkForm && appointmentForm.controls['service'].errors}"
+                                    placeholder="Service" autocomplete="off">
+                                    <option value="">Select Service</option>
+                                    <option value="Neurologist">Neurologist</option>
+                                    <option value="Cardiologist">Cardiologist</option>
+                                </select>
+                                <small *ngIf="checkForm && appointmentForm.controls['service'].errors"
+                                    class="text-danger">Please Enter
+                                    Service</small>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class=" card-body col-md-8 border mt-4">
+                    <div class="form-group">
+
+                        <label for="" class="m-0 p-0">Available Slot <span class="mandatory">*</span></label>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" *ngFor="let p of allAppoint"  >
+                          <button [disabled]="(p.morningSessionFrom === 'booked') ? true : '' "   class="btn mt-1 border" [ngClass]="{'set_color': clr==p.morningSessionFrom}" (click)="slot(p.morningSessionFrom ,'morning')" >
+                                {{p.morningSessionFrom}} morning
+                            </button>
+                            <button class="btn mx-2 border" [ngClass]="{'set_color': clr==p.eveningTimeFrom}" (click)="slot(p.eveningTimeFrom, 'evening')" >
+                                {{p.eveningTimeFrom}} evening
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-lg-4 col-sm-6 col-12 ">
+                    <div class="form-group">
+                        <label for="">Appointment Date <span class="mandatory">*</span></label>
+                        <input type="date" [min]="now" required="required" class="form-control" formControlName="appointmentDate"
+                            placeholder="Appointment Date" 
+                            [ngClass]="{'is-invalid':checkForm && appointmentForm.controls['appointmentDate'].errors}">
+                        <small *ngIf="checkForm && appointmentForm.controls['appointmentDate'].errors"
+                            class="text-danger">Please Enter
+                            Appointment Date</small>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for=""> Patient <span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="patientName"
+                            [ngClass]="{'is-invalid':checkForm && appointmentForm.controls['patientName'].errors}">
+                            <option value="">Select Patient</option>
+                            <option *ngFor="let p of allPatient">{{p.firstname}}</option>
+                        </select>
+
+                        <small *ngIf="checkForm && appointmentForm.controls['patientName'].errors"
+                            class="text-danger">Please
+                            Select Patient Name </small>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+
+                    <div class="form-group">
+                        <label for="">Status <span class="mandatory">*</span></label>
+                        <select name="" id="" formControlName="status" class="form-control"
+                            [ngClass]="{'is-invalid':checkForm && appointmentForm.controls['status'].errors}">
+                            <option value="">Select Status</option>
+                            <option>Booked</option>
+                            <option>Pending</option>
+                            <option>Checked In</option>
+                            <option>Check Out</option>
+                            <option>Cancelled</option>
+                        </select>
+                        <small *ngIf="checkForm && appointmentForm.controls['status'].errors" class="text-danger">Please
+                            Status</small>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="">Service Details <span class="mandatory">*</span></label>
+                        <input type="text" autocomplete="off" class="form-control" formControlName="serviceDetails"
+                            placeholder="Service Details" autocomplete="off"
+                            [ngClass]="{'is-invalid':checkForm && appointmentForm.controls['serviceDetails'].errors}">
+                        <small *ngIf="checkForm && appointmentForm.controls['serviceDetails'].errors"
+                            class="text-danger">
+                            Select Service Details</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="">Tax <span class="mandatory">*</span></label>
+                        <input type="text" autocomplete="off" class="form-control" formControlName="tax"
+                            placeholder="Tax" autocomplete="off"
+                            [ngClass]="{'is-invalid':checkForm && appointmentForm.controls['tax'].errors}">
+                        <small *ngIf="checkForm && appointmentForm.controls['tax'].errors" class="text-danger">Please
+                            Enter
+                            Tax</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="">Add Medical Report <span class="mandatory">*</span></label>
+                        <input type="file" autocomplete="off" (change)="Onupload($event)" class="form-control"
+                            formControlName="medicalReport" placeholder="Add Medical Report " autocomplete="off"
+                            [ngClass]="{'is-invalid':checkForm && appointmentForm.controls['medicalReport'].errors}">
+                        <small *ngIf="checkForm && appointmentForm.controls['medicalReport'].errors"
+                            class="text-danger">Please
+                            Add Medical Report </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+        <div class="col-12  m-0 p-0 mx-4 mb-3">
+            <button class="btn btn-submit me-2" (click)="saveAppointment()">Submit</button>
+            <a class="btn btn-submit" (click)="cancelCoupan()">Cancel</a>
+        </div>
+    </form>
+</div>

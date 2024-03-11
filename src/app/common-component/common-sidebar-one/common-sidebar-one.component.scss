@@ -1,0 +1,19 @@
+#sidebar .sidebar-inner {
+    width: 100%;
+  }
+ 
+  .active{
+    background-color: red;
+  }
+
+  a:active{
+    background:var(--primary) !important;
+}
+
+a:focus{
+    background:var(--primary) !important;
+    
+}
+i::before{
+  background-color: white;
+}

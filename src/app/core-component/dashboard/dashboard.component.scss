@@ -1,0 +1,258 @@
+.bgd{
+    background-color:white
+}
+.card-titles{
+  color: #787f88!important;;
+}
+
+.tex{
+  color: 
+  var(--primary) !important;
+}
+.card-subtitle{
+  color: black;
+}
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .selected-date-wrapper {
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .mat-calendar {
+    margin: 0 auto;
+    width: 500px;
+    border-radius: 10px;
+  }
+.app-top {
+  margin: 0 0 3em;
+}
+.app-calendar {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+    padding-right: 7.5px;
+    padding-left: 7.5px;
+
+    position: relative;
+    // width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.text-white {
+  color: #fff!important;
+}
+.bg-gradient-red {
+  background: linear-gradient(87deg,#e3342f,#e37f2f)!important;
+}
+.icon-shape {
+  padding: 12px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+.shadow {
+  box-shadow: 0 0 2rem 0 rgba(136,152,170,.15)!important;
+}
+.rounded-circle {
+border-radius: 50%!important;
+}
+
+
+
+.text-white {
+  color: #fff!important;
+}
+[class*=shadow] {
+  transition: all .15s ease;
+}
+.bg-gradient-orange {
+  background: linear-gradient(87deg,#f6993f,#f6e53f)!important;
+}
+.icon-shape {
+  padding: 12px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+.shadow {
+  box-shadow: 0 0 2rem 0 rgba(136,152,170,.15)!important;
+}
+.avatar.rounded-circle img, .rounded-circle {
+  border-radius: 50%!important;
+}
+
+
+
+.text-white {
+    color: #fff!important;
+}
+[class*=shadow] {
+    transition: all .15s ease;
+}
+.bg-gradient-green {
+    background: linear-gradient(87deg,#38c172,#38c1ab)!important;
+}
+.icon-shape {
+    padding: 12px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.icon {
+    width: 3rem;
+    height: 3rem;
+}
+.shadow {
+    box-shadow: 0 0 2rem 0 rgba(136,152,170,.15)!important;
+}
+.avatar.rounded-circle img, .rounded-circle {
+    border-radius: 50%!important;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    // background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.05);
+    border-radius: 0.375rem;
+}
+a, a:hover {
+    color: #000;
+    text-decoration: none;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+
+.icon-shape i, .icon-shape svg {
+  font-size: 1.00rem;
+}
+.icon i, .icon svg {
+  font-size: 1.25rem;
+}
+.fa, .fas {
+  font-weight: 900;
+}
+
+
+
+// fourth
+
+.text-white {
+  color: #fff!important;
+}
+[class*=shadow] {
+  transition: all .15s ease;
+}
+.bg-gradient-info {
+  background: linear-gradient(87deg,#4dc0b5,#4d9bc0)!important;
+}
+.icon-shape {
+  padding: 12px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+.shadow {
+  box-shadow: 0 0 2rem 0 rgba(136,152,170,.15)!important;
+}
+.avatar.rounded-circle img, .rounded-circle {
+  border-radius: 50%!important;
+}
+*, :after, :before {
+  box-sizing: border-box;
+}
+user agent stylesheet
+div {
+  display: block;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  // background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.05);
+  border-radius: 0.375rem;
+}
+
+
+
+
+b { /* used for event dates/times */
+  margin-right: 3px;
+}
+
+.demo-app {
+  display: flex;
+  min-height: 100%;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.demo-app-sidebar {
+  width: 300px;
+  line-height: 1.5;
+  background: #eaf9ff;
+  border-right: 1px solid #d3e2e8;
+}
+
+.demo-app-sidebar-section {
+  padding: 2em;
+}
+
+.demo-app-main {
+  flex-grow: 1;
+  padding: 3em;
+}
+
+.fc { /* the calendar root */
+  max-width: 1100px;
+  margin: 0 auto;
+}
