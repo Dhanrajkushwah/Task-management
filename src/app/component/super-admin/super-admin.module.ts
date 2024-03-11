@@ -22,6 +22,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { AngularSignaturePadModule } from '@almothafar/angular-signature-pad';
+import { ModalComponent } from './component/shared/modal/modal.component';
 // import { ExcelService } from './services/excel/excel.service';
 
 @NgModule({
@@ -31,6 +32,7 @@ import { AngularSignaturePadModule } from '@almothafar/angular-signature-pad';
     AppoinmentComponent,
     AppoinmentListComponent,
     ChartsComponent,
+    ModalComponent,
   ],
   imports: [
     CommonModule,
