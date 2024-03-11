@@ -20,6 +20,11 @@ const routes: Routes = [
         path : 'company',
         loadChildren :()=> import('../super-admin/component/pages/company/company.module').then((c)=>c.CompanyModule),
 
+      },
+      {
+        path : 'catagroy',
+        loadChildren :()=> import('../super-admin/component/pages/category/category.module').then((cat)=>cat.CategoryModule),
+
       }
 
 

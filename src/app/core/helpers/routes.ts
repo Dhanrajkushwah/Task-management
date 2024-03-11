@@ -34,9 +34,7 @@ export class routes {
   public static get core(): string {
     return this.baseUrl;
   }
-  public static get dashboard(): string {
-    return this.SuperAdmin + '/dashboard';
-  }
+
   public static get dashboardadmin(): string {
     return this.core + '/admin/dashboard';
   }
@@ -44,6 +42,18 @@ export class routes {
     return this.core + '/client/dashboard';
   }
 
+// super addmin routes only
+
+
+  public static get dashboard(): string {
+    return this.SuperAdmin + '/dashboard';
+  }
+  public static get company(): string {
+    return this.SuperAdmin + '/company';
+  }
+  public static get category(): string {
+    return this.SuperAdmin + '/catagroy';
+  }
 
 
 
