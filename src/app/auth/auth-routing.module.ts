@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth.component';
+import { CompanyRegistrationComponent } from './company-registration/company-registration.component';
 
 
 
@@ -27,6 +28,10 @@ const routes: Routes = [
             (m) => m.ForgetpasswordModule
           ),
       },
+      {
+        path: 'companyregister',
+        component :CompanyRegistrationComponent
+      }
       
       // {
       //   path: 'staffregister',

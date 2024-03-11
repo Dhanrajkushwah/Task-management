@@ -1397,14 +1397,14 @@ export class SidebarService {
           icon: 'grid',
           subMenus: [],
         },
-         {
-          menuValue: 'Registration',
-          route: routes.task,
-          hasSubRoute: false,
-          showSubRoute: false,
-          icon: 'calendar',
-          subMenus: [],
-        },
+        //  {
+        //   menuValue: 'Registration',
+        //   route: routes.task,
+        //   hasSubRoute: false,
+        //   showSubRoute: false,
+        //   icon: 'calendar',
+        //   subMenus: [],
+        // },
         // {
         //   menuValue: 'Encounters',
         //   route: routes.encounterTemplateList,
@@ -1431,14 +1431,14 @@ export class SidebarService {
           subMenus: [],
         },
     
-        {
-          menuValue: 'Total Task',
-          route: routes.services,
-          hasSubRoute: false,
-          showSubRoute: false,
-          icon: 'plus-square',
-          subMenus: [],
-        },
+        // {
+        //   menuValue: 'Total Task',
+        //   route: routes.services,
+        //   hasSubRoute: false,
+        //   showSubRoute: false,
+        //   icon: 'plus-square',
+        //   subMenus: [],
+        // },
        
       
         {
