@@ -1399,7 +1399,11 @@ export class SidebarService {
         },
          {
           menuValue: 'Registration',
+<<<<<<< HEAD
           route: routes,
+=======
+          route: routes.task,
+>>>>>>> 62ddaf406764119ad181af96728a8978185e4e61
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'calendar',
@@ -1408,7 +1412,11 @@ export class SidebarService {
 
         {
           menuValue: 'Task Management',
+<<<<<<< HEAD
           route: routes,
+=======
+          route: routes.task,
+>>>>>>> 62ddaf406764119ad181af96728a8978185e4e61
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'users',
@@ -1470,7 +1478,11 @@ export class SidebarService {
         },
         {
           menuValue: 'Registration',
+<<<<<<< HEAD
           route: routes,
+=======
+          route: routes.task,
+>>>>>>> 62ddaf406764119ad181af96728a8978185e4e61
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'calendar',
