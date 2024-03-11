@@ -53,7 +53,7 @@
                     <div class="form-group">
                         <label for="">Company Image </label>
                         <input class="form-control" type="file" (change)="Onuploadpro($event)"
-                            formControlName="image" class="form-control"
+                            formControlName="image"
                             [ngClass]="{'is-invalid': addCompanyRegistration.controls['image'].errors && ck }">
                             <p class="text-danger" *ngIf="addCompanyRegistration.controls['image'].errors && ck"> Enter Your Company
                                 Image
