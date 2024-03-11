@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth.component';
+import { CompanyRegistrationComponent } from './company-registration/company-registration.component';
+
+
+
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 const routes: Routes = [
   { path: '', redirectTo: 'signin', pathMatch: 'full' },
@@ -25,7 +29,11 @@ const routes: Routes = [
             (m) => m.ForgetpasswordModule
           ),
       },
-
+      {
+        path: 'companyregister',
+        component :CompanyRegistrationComponent
+      }
+      ,
       // {
       //   path: 'staffregister',
       //   component :StaffRegisterComponent

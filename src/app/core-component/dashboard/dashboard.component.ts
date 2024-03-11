@@ -17,7 +17,7 @@ import {
   ApexLegend,
   ApexFill,
 } from 'ng-apexcharts';
-import { CompanyService } from 'src/app/component/super-admin/services/company.service';
+// import { CompanyService } from 'src/app/component/super-admin/services/company.service';
 import { CommonService, SettingsService } from 'src/app/core/core.index';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGrigPlugin from '@fullcalendar/timegrid';
@@ -45,10 +45,9 @@ export type ChartOptions = {
   fill: ApexFill | any;
 };
 import { routes } from 'src/app/core/helpers/routes';
-import { Title } from '@angular/platform-browser';
+
 import { MatDialog } from '@angular/material/dialog';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -60,7 +59,7 @@ export class DashboardComponent implements OnInit {
   public admin_token: any;
   public super_token: any;
   public user_token: any;
-  constructor(private common: CommonService, private setting: SettingsService, private service: CompanyService,
+  constructor(private common: CommonService, private setting: SettingsService,
     public dialog: MatDialog) {
     this.super_token = sessionStorage.getItem('superadmin-token')
     this.admin_token = sessionStorage.getItem('admin-token')
