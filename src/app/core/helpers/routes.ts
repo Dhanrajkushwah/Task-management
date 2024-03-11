@@ -163,8 +163,8 @@ public static get Admin_Manager(): string {
   public static get appointment(): string {
     return this.core + '/super-admin/appointmentlist/add';
   }
-  public static get appointmentList(): string {
-    return this.core + '/super-admin/appointmentlist';
+  public static get task(): string {
+    return this.core + '/admin/task';
   }
   public static get tax(): string {
     return this.core + '/super-admin/tax';

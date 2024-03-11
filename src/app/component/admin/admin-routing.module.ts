@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
+import { TaskComponent } from './component/pages/task/task.component';
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
@@ -12,11 +13,10 @@ const routes: Routes = [
         loadChildren: () =>
           import('../../core-component/dashboard/dashboard.module').then((m) => m.DashboardModule),
       },
-     
-      // {
-      //   path : 'clients/client-reset-password',
-      //   component : ClientsResetPasswordComponent
-      // },
+      {
+        path : 'task',
+        component : TaskComponent
+      },
    
     ],
   },

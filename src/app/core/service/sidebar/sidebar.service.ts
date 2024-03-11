@@ -58,7 +58,7 @@ export class SidebarService {
         },
         {
           menuValue: 'Company Management',
-          route: routes.appointmentList,
+          route: routes.task,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'calendar',
@@ -1399,7 +1399,7 @@ export class SidebarService {
         },
          {
           menuValue: 'Registration',
-          route: routes.appointmentList,
+          route: routes.task,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'calendar',
@@ -1424,7 +1424,7 @@ export class SidebarService {
         // },
         {
           menuValue: 'Task Management',
-          route: routes.patientList,
+          route: routes.task,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'users',
@@ -1486,7 +1486,7 @@ export class SidebarService {
         },
         {
           menuValue: 'Registration',
-          route: routes.appointmentList,
+          route: routes.task,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'calendar',
