@@ -24,7 +24,7 @@ export class UserSigninComponent {
       this.ckForm = true;
       return
     } else {
-      this.authservice.login(this.addUserForm.invalid).subscribe({
+      this.authservice.login(this.addUserForm.value).subscribe({
         next: (res: any) => {
           console.log(res)
           if (res.role === 'superadmin') {
