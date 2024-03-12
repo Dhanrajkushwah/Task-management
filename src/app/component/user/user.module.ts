@@ -10,6 +10,7 @@ import { ServicesListComponent } from './components/pages/services-list/services
 import { UserTaskComponent } from './pages/user-task/user-task.component';
 import { AddUserTaskComponent } from './shared/add-user-task/add-user-task.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserPopupComponent } from './components/shared/user-popup/user-popup.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ServicesListComponent,
     UserTaskComponent,
     AddUserTaskComponent,
+    UserPopupComponent,
   ],
   imports: [
     CommonModule,

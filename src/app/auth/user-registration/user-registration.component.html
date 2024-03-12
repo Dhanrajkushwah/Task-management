@@ -1,4 +1,4 @@
-<div class="account-content">
+<!-- <div class="account-content">
   <div class="login-wrapper">
     <div class="login-content">
       <div class="login-userset">
@@ -68,4 +68,53 @@
       <img src="../../../assets//img/login.jpg" alt="img" />
     </div>
   </div>
-</div>
+</div> -->
+<body class="backimg">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-6">
+              <div class="card login-card shadow  ">
+                  <div class="card-body">
+                      <h4 class="text-center" style="font-weight: 500px;">Create an User Account</h4>
+                      <form [formGroup]="addUserForm">
+                      <div class="my-3">
+                          <label style="font-weight: 600;">User Name<span class="text-danger">*</span></label>
+                          <input type="text" class=" form-control" formControlName="name" [ngClass]="{'is-invalid': addUserForm.controls['name'].errors && ckForm }" placeholder="Enter username" />
+                          <small *ngIf="addUserForm.controls['name'].errors && ckForm" class="text-danger">Enter Your Username
+                          </small>
+                      </div>
+                      <div class="my-3">
+                        <label style="font-weight: 600;">Email<span class="text-danger">*</span></label>
+                        <input type="email" class=" form-control" formControlName="email" [ngClass]="{'is-invalid': addUserForm.controls['email'].errors && ckForm }" placeholder="Email" />
+                        <small *ngIf="addUserForm.controls['email'].errors && ckForm" class="text-danger">Enter Your Email
+                        </small>
+                    </div>
+                      <div class="my-3">
+                          <label style="font-weight: 600;">Password<span class="text-danger">*</span></label>
+                          <input type="text"  class=" form-control" formControlName="password"
+                          [ngClass]="{'is-invalid': addUserForm.controls['password'].errors && ckForm }" placeholder="Password">
+                      <small class="text-danger" *ngIf="addUserForm.controls['password'].errors && ckForm"> Enter Your Password
+                      </small>
+                      </div>
+                      <div class="my-3">
+                        <label style="font-weight: 600;">User Skills<span class="text-danger">*</span></label>
+                        <input type="text"  class=" form-control" formControlName="skills"
+                        [ngClass]="{'is-invalid': addUserForm.controls['skills'].errors && ckForm }" placeholder="Skills">
+                    <small class="text-danger" *ngIf="addUserForm.controls['skills'].errors && ckForm"> Enter Your Skills
+                    </small>
+                    </div>
+
+                      <button  (click)="submit()"
+                      type="submit" class="btn btn-info text-light float-end  px-5" >Login</button>
+                      <div class="signinform text-center">
+                        <h4>
+                            Already a user? <a routerLink="/sign-in/usersignin" class="hover-a">User Sign In</a>
+                        </h4>
+                    </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
