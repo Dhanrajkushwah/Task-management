@@ -10,7 +10,7 @@
         </div>
         <form [formGroup]="addUserForm">
         <div class="my-2">
-          <label class="form-label text-white" for="email">Email address</label>
+          <label class="form-label text-white" for="email">Email</label>
           <input type="email" class=" form-control" formControlName="email" [ngClass]="{'is-invalid': addUserForm.controls['email'].errors && ckForm }" placeholder="Email" />
           <small *ngIf="addUserForm.controls['email'].errors && ckForm" class="text-danger">Enter Your Email
           </small>
@@ -33,7 +33,7 @@
         </div>
         <div>
           <a (click)="submit()"
-          type="submit" class="btn btn-primary w-full rounded-5 w-100">
+          type="submit" class="btn btn-info text-light w-full rounded-5 w-100">
             Sign in
           </a>
         </div>
