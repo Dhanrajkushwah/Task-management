@@ -10,7 +10,7 @@ import { AdminService } from 'src/app/services/admin-service';
   styleUrls: ['./user-task.component.scss']
 })
 export class UserTaskComponent {
-  displayedColumns: string[] = ['sno', 'name','time', 'category','subcategory','action' ];
+  displayedColumns: string[] = ['sno', 'name','time', 'category','subcategory' ];
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
@@ -42,24 +42,6 @@ export class UserTaskComponent {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
-  deleteAppointment(obj:any){
-    // this._sweetAlert.deleteBtn().then((val)=>{
-    //   if(val.isConfirmed){
-    //    this.service.deleteAppointmentById(obj._id).subscribe({
-    //     next:(res)=>{
-    //       console.log("data deleted", res);
-    //       this.ngOnInit()
-    //     }
-    //    })
-    //   }
-    // })
-  }
-  editAppointment(id:any){
-    this.route.navigate(
-      ['/super-admin/edit-appointment'],
-      { queryParams: { id: id } }
-    );
   }
 
 }

@@ -45,6 +45,9 @@ export class routes {
   public static get userTask(): string {
     return this.core + '/user/usertask';
   }
+  public static get totalTask(): string {
+    return this.core + '/user/totaltask';
+  }
   
 
 // super addmin routes only

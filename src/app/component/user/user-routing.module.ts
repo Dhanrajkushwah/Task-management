@@ -4,6 +4,8 @@ import { UserComponent } from './user.component';
 import { ServicesListComponent } from './components/pages/services-list/services-list.component';
 import { UserTaskComponent } from './pages/user-task/user-task.component';
 import { AddUserTaskComponent } from './shared/add-user-task/add-user-task.component';
+import { TotalTaskComponent } from './pages/total-task/total-task.component';
+import { UserTaskViewComponent } from './pages/user-task-view/user-task-view.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -30,6 +32,17 @@ const routes: Routes = [
         path: 'addusertask',
         component: AddUserTaskComponent
       }
+      ,
+      {
+        path: 'totaltask',
+        component: TotalTaskComponent
+      }
+      ,
+      {
+        path: 'usertaskview',
+        component: UserTaskViewComponent
+      }
+      
     ],
   },
 ];

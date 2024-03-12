@@ -1515,13 +1515,22 @@ export class SidebarService {
           subMenus: [],
         },
         {
-          menuValue: 'User Task',
+          menuValue: 'Total Task',
+          route: routes.totalTask,
+          hasSubRoute: false,
+          showSubRoute: false,
+          icon: 'hard-drive',
+          subMenus: [],
+        },
+        {
+          menuValue: 'User Complete Task',
           route: routes.userTask,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'hard-drive',
           subMenus: [],
         },
+     
       ],
     },
 

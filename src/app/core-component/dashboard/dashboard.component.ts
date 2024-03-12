@@ -47,6 +47,7 @@ export type ChartOptions = {
 import { routes } from 'src/app/core/helpers/routes';
 
 import { MatDialog } from '@angular/material/dialog';
+import { AdminService } from 'src/app/services/admin-service';
 
 
 @Component({
@@ -59,14 +60,28 @@ export class DashboardComponent implements OnInit {
   public admin_token: any;
   public super_token: any;
   public user_token: any;
-  constructor(private common: CommonService, private setting: SettingsService,
+  data: any
+  name: any
+  constructor(private common: CommonService, private setting: SettingsService,private service:AdminService,
     public dialog: MatDialog) {
     this.super_token = sessionStorage.getItem('superadmin-token')
     this.admin_token = sessionStorage.getItem('admin-token')
-    this.user_token = sessionStorage.getItem('user-token')
+    this.user_token = sessionStorage.getItem('user_id')
   }
   ngOnInit(): void {
+    if (this.user_token) {
+      this.service.getProfile(this.user_token).subscribe({
+        next: (res) => {
+          this.data = res;
+          this.name = this.data.name
+        },
+        error(err) {
+          console.log(err)
+        },
+      })
+    }
   }
+
 
 
 

@@ -11,6 +11,8 @@ import { UserTaskComponent } from './pages/user-task/user-task.component';
 import { AddUserTaskComponent } from './shared/add-user-task/add-user-task.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserPopupComponent } from './components/shared/user-popup/user-popup.component';
+import { TotalTaskComponent } from './pages/total-task/total-task.component';
+import { UserTaskViewComponent } from './pages/user-task-view/user-task-view.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { UserPopupComponent } from './components/shared/user-popup/user-popup.co
     UserTaskComponent,
     AddUserTaskComponent,
     UserPopupComponent,
+    TotalTaskComponent,
+    UserTaskViewComponent,
   ],
   imports: [
     CommonModule,

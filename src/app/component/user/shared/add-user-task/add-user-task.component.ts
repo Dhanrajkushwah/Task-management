@@ -22,7 +22,6 @@ export class AddUserTaskComponent implements OnInit {
     private _routes: Router,
   ) { 
     this.user_id = sessionStorage.getItem("user_id");
-
   }
 
   ngOnInit(): void {
@@ -32,7 +31,6 @@ export class AddUserTaskComponent implements OnInit {
       description:['', Validators.required],
       descriptionFile:[''],
       userId:[this.user_id],
-     
     });
    
 
@@ -45,13 +43,10 @@ export class AddUserTaskComponent implements OnInit {
     if (event.target.files && event.target.files[0]) {
       const filesAmount = event.target.files.length;
       for (let i = 0; i < filesAmount; i++) {
-
         const reader = new FileReader();
         reader.onload = (event: any) => {
           this.imagesBox = event.target.result;
-
         }
-
         reader.readAsDataURL(event.target.files[i]);
       }
     }

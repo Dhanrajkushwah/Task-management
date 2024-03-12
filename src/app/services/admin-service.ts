@@ -31,8 +31,8 @@ export class AdminService {
   addProfile(data: any) {
     return this._http.post<any>(environment._api + "/api/admin", data)
   }
-  getProfile() {
-    return this._http.get<any>(environment._api + "/api/admin/profile")
+  getProfile(id:any) {
+    return this._http.get<any>(environment._api + "/api/admin/profile",id)
   }
 }
 
