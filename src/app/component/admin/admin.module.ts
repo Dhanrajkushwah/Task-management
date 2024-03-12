@@ -11,12 +11,18 @@ import { MaterialModule } from 'src/app/shared/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TaskComponent } from './component/pages/task/task.component';
 import { AddTaskComponent } from './component/shared/add-task/add-task.component';
+import { RatingComponent } from './component/pages/rating/rating.component';
+import { AddRatingComponent } from './component/shared/add-rating/add-rating.component';
+import { ProfileComponent } from './component/pages/profile/profile.component';
 
 @NgModule({
   declarations: [
     AdminComponent,
     TaskComponent,
     AddTaskComponent,
+    RatingComponent,
+    AddRatingComponent,
+    ProfileComponent,
 
 
   ],

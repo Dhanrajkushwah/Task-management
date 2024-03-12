@@ -1,6 +1,6 @@
 <div class="page-header">
     <div class="page-title">
-      <h4> Add Task</h4>
+      <h4>Complete User Task</h4>
     </div>
   </div>
   
@@ -18,33 +18,9 @@
           </div>
           <div class="col-lg-4 col-sm-6 col-12">
             <div class="form-group">
-              <label>Category</label>
-              <input type="text" formControlName="category" placeholder="Enter Category" />
-              <small *ngIf="addTaskForm.controls['category'].errors && ckForm" class="text-danger">Enter Your Category
-              </small>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-12">
-            <div class="form-group">
-              <label>Sub-Category</label>
-              <input type="text" formControlName="subCategory" placeholder="Enter Sub-Category" />
-              <small *ngIf="addTaskForm.controls['subCategory'].errors && ckForm" class="text-danger">Enter Your Sub-Category
-              </small>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-12">
-            <div class="form-group">
               <label>Task Time</label>
               <input type="text" formControlName="taskTime" placeholder="Enter Task Time" />
               <small *ngIf="addTaskForm.controls['taskTime'].errors && ckForm" class="text-danger">Enter Your Task Time
-              </small>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-12">
-            <div class="form-group">
-              <label>Price</label>
-              <input type="text"  formControlName="price" placeholder="Enter Price" />
-              <small *ngIf="addTaskForm.controls['price'].errors && ckForm" class="text-danger">Enter Your Price
               </small>
             </div>
           </div>

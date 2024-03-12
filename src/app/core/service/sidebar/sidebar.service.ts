@@ -1444,41 +1444,41 @@ export class SidebarService {
 
 
 
-        {
-          menuValue: 'Total Task',
-          route: routes,
-          hasSubRoute: false,
-          showSubRoute: false,
-          icon: 'plus-square',
-          subMenus: [],
-        },
+        // {
+        //   menuValue: 'Total Task',
+        //   route: routes,
+        //   hasSubRoute: false,
+        //   showSubRoute: false,
+        //   icon: 'plus-square',
+        //   subMenus: [],
+        // },
 
 
 
         {
           menuValue: 'Rating',
-          route: routes,
+          route: routes.ratingadmin,
           hasSubRoute: false,
           showSubRoute: false,
           icon: 'edit',
           subMenus: [],
         },
-        {
-          menuValue: 'Profile',
-          route: routes,
-          hasSubRoute: false,
-          showSubRoute: false,
-          icon: 'arrow-down-circle',
-          subMenus: [],
-        },
-        {
-          menuValue: 'Complete Task',
-          route: routes,
-          hasSubRoute: false,
-          showSubRoute: false,
-          icon: 'award',
-          subMenus: [],
-        },
+        // {
+        //   menuValue: 'Profile',
+        //   route: routes.profileadmin,
+        //   hasSubRoute: false,
+        //   showSubRoute: false,
+        //   icon: 'arrow-down-circle',
+        //   subMenus: [],
+        // },
+        // {
+        //   menuValue: 'Complete Task',
+        //   route: routes,
+        //   hasSubRoute: false,
+        //   showSubRoute: false,
+        //   icon: 'award',
+        //   subMenus: [],
+        // },
       ],
     },
 
@@ -1514,7 +1514,14 @@ export class SidebarService {
           icon: 'hard-drive',
           subMenus: [],
         },
-
+        {
+          menuValue: 'User Task',
+          route: routes.userTask,
+          hasSubRoute: false,
+          showSubRoute: false,
+          icon: 'hard-drive',
+          subMenus: [],
+        },
       ],
     },
 

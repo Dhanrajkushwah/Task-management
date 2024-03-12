@@ -7,11 +7,16 @@ import { CommonLayoutComponent } from 'src/app/common-component/common-layout/co
 import { CommonSidebarOneComponent } from 'src/app/common-component/common-sidebar-one/common-sidebar-one.component';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { ServicesListComponent } from './components/pages/services-list/services-list.component';
+import { UserTaskComponent } from './pages/user-task/user-task.component';
+import { AddUserTaskComponent } from './shared/add-user-task/add-user-task.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     UserComponent,
     ServicesListComponent,
+    UserTaskComponent,
+    AddUserTaskComponent,
   ],
   imports: [
     CommonModule,
@@ -20,6 +25,7 @@ import { ServicesListComponent } from './components/pages/services-list/services
     CommonHeaderComponent,
     CommonLayoutComponent,
     CommonSidebarOneComponent,
+    ReactiveFormsModule,
 
   ]
 })

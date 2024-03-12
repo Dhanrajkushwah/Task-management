@@ -7,7 +7,7 @@
 
 .tex{
   color: 
-  var(--primary) !important;
+  white !important;
 }
 .card-subtitle{
   color: black;
@@ -52,7 +52,7 @@
     padding-left: 15px;
 }
 .text-white {
-  color: #fff!important;
+  color: white!important;
 }
 .bg-gradient-red {
   background: linear-gradient(87deg,#e3342f,#e37f2f)!important;
@@ -79,7 +79,7 @@ border-radius: 50%!important;
 
 
 .text-white {
-  color: #fff!important;
+  color: white!important;
 }
 [class*=shadow] {
   transition: all .15s ease;
@@ -109,7 +109,7 @@ border-radius: 50%!important;
 
 
 .text-white {
-    color: #fff!important;
+    color: white!important;
 }
 [class*=shadow] {
     transition: all .15s ease;
@@ -148,7 +148,7 @@ div {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    // background-color: #fff;
+    // background-color: white;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.05);
     border-radius: 0.375rem;
@@ -177,7 +177,7 @@ a:-webkit-any-link {
 // fourth
 
 .text-white {
-  color: #fff!important;
+  color: white!important;
 }
 [class*=shadow] {
   transition: all .15s ease;
@@ -216,7 +216,7 @@ div {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  // background-color: #fff;
+  // background-color: white;
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.05);
   border-radius: 0.375rem;
