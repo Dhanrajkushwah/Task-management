@@ -6,6 +6,7 @@ import { CompanyRegistrationComponent } from './company-registration/company-reg
 
 
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { UserSigninComponent } from './user-signin/user-signin.component';
 const routes: Routes = [
   { path: '', redirectTo: 'signin', pathMatch: 'full' },
   {
@@ -34,10 +35,10 @@ const routes: Routes = [
         component :CompanyRegistrationComponent
       }
       ,
-      // {
-      //   path: 'staffregister',
-      //   component :StaffRegisterComponent
-      // },
+      {
+        path: 'usersignin',
+        component :UserSigninComponent
+      },
       {
         path: 'userregister',
         component :UserRegistrationComponent

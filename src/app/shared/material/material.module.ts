@@ -9,7 +9,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatStepperModule } from '@angular/material/stepper';
 import {CdkStepperModule} from '@angular/cdk/stepper';
 import { MatInputModule } from '@angular/material/input';
-// import { MatFormFieldModule } from '@angular/material/form-field';  
+// import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -66,8 +66,8 @@ export const modi = [
     FormsModule,
     ReactiveFormsModule,
     MatPaginatorModule,
-    
- 
+
+
 ]
 @NgModule({
   imports: [

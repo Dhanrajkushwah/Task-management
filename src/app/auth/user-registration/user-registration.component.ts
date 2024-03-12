@@ -18,6 +18,7 @@ export class UserRegistrationComponent {
       name: ['',Validators.required],
       email: ['',Validators.required],
       password:['',Validators.required],
+      skills:['',Validators.required],
     });
   }
   submit() {

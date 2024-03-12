@@ -7,11 +7,13 @@ import { CommonLayoutComponent } from 'src/app/common-component/common-layout/co
 import { CommonSidebarOneComponent } from 'src/app/common-component/common-sidebar-one/common-sidebar-one.component';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { ServicesListComponent } from './components/pages/services-list/services-list.component';
+import { UserPopupComponent } from './components/shared/user-popup/user-popup.component';
 
 @NgModule({
   declarations: [
     UserComponent,
     ServicesListComponent,
+    UserPopupComponent,
   ],
   imports: [
     CommonModule,

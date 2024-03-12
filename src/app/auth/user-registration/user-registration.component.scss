@@ -1,0 +1,15 @@
+.backimg {
+  height: 650px;
+  width: 100%;
+  background-image: url("https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?w=740&t=st=1710227140~exp=1710227740~hmac=e6517ad57b0ec2749e5f89a2278a13b67984d7f55ad993d0f49dc69ae5a5a09d");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.login-card {
+  margin-top: 100px;
+  transition: .5s;
+}
+.login-card:hover {
+  box-shadow: 2px 2px 5px 2px rgb(70, 69, 69);
+}

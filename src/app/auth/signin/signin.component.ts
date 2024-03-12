@@ -17,7 +17,7 @@ export class SigninComponent {
     email: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
   });
-  
+
   get f() {
     return this.form.controls;
   }
