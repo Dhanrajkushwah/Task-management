@@ -1,0 +1,37 @@
+<div class="page-header">
+    <div class="page-title">
+        <h4>Company Profile</h4>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="profileForm">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" formControlName="name" placeholder="Enter Company Name" />
+                        <small *ngIf="profileForm.controls['name'].errors && ckForm" class="text-danger">Enter Your
+                            Company Name
+                        </small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label>Company Email</label>
+                        <input type="text" formControlName="email" placeholder="Enter Company Email" />
+                        <small *ngIf="profileForm.controls['email'].errors && ckForm" class="text-danger">Enter Your
+                            Company Email
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-submit me-2" (click)="onSubmit()">
+                Submit
+            </button>
+            <a class="btn btn-cancel" (click)="cancel()">Cancel</a>
+
+        </form>
+    </div>
+</div>

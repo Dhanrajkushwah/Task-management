@@ -16,7 +16,6 @@ export class routes {
   public static get auth(): string {
     return this.base + '/auth';
   }
-  // pooja
 
   public static get signIn(): string {
     return this.base + '/signin';
@@ -35,26 +34,20 @@ export class routes {
     return this.User + '/seviceslist';
   }
 
-
-
-
-
   public static get core(): string {
     return this.baseUrl;
   }
 
-  public static get dashboardadmin(): string {
-    return this.core + '/admin/dashboard';
-  }
-  public static get taskadmin(): string {
-    return this.core + '/admin/task';
-  }
   public static get dashboardclient(): string {
     return this.core + '/client/dashboard';
   }
 
-// super addmin routes only
+  public static get userTask(): string {
+    return this.core + '/user/usertask';
+  }
+  
 
+// super addmin routes only
 
   public static get dashboard(): string {
     return this.SuperAdmin + '/dashboard';
@@ -66,6 +59,19 @@ export class routes {
     return this.SuperAdmin + '/catagroy';
   }
 
+/// admin routes ////
 
+public static get dashboardadmin(): string {
+  return this.core + '/admin/dashboard';
+}
+public static get taskadmin(): string {
+  return this.core + '/admin/task';
+}
+public static get ratingadmin(): string {
+  return this.core + '/admin/rating';
+}
+public static get profileadmin(): string {
+  return this.core + '/admin/profile';
+}
 
 }

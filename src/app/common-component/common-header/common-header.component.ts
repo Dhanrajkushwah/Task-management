@@ -85,8 +85,8 @@ export class CommonHeaderComponent implements OnInit {
       this._profileData.GetProfile(admin_id).subscribe({
         next: (res) => {
           this.data = res;
-          this.role = this.data.role
-          this.name = this.data.firstname + " " + this.data.lastname
+          this.img = this.data.image
+          this.name = this.data.name
         },
         error(err) {
           console.log(err)
@@ -106,27 +106,13 @@ export class CommonHeaderComponent implements OnInit {
         },
       })
     }
-    else if (client_id) {
-      this._profileData.GetProfile(client_id).subscribe({
-        next: (res) => {
-          this.data = res;
-          this.img = this.data.image
-          this.img = 'https://logodix.com/logo/1956442.png';
-          this.role = this.data.role
-          this.name = "Patient"
-        },
-        error(err) {
-          console.log(err)
-        },
-      })
-    }
     else if (user_id) {
       this._profileData.GetProfile(user_id).subscribe({
         next: (res) => {
           this.data = res;
           this.img = this.data.image
           this.role = this.data.role
-          this.name = "Receptionist"
+          this.name = this.data.name
         },
         error(err) {
           console.log(err)
@@ -139,20 +125,10 @@ export class CommonHeaderComponent implements OnInit {
     sessionStorage.removeItem('admin-token')
     sessionStorage.removeItem('superadmin-token')
     sessionStorage.removeItem('user-token')
-    sessionStorage.removeItem('client-token')
-    sessionStorage.removeItem('manager-token')
-    sessionStorage.removeItem('manager_id')
     sessionStorage.removeItem('superadmin_id')
     sessionStorage.removeItem('admin_id')
-    sessionStorage.removeItem('client_id')
     sessionStorage.removeItem('user_id')
     sessionStorage.removeItem('menuValue')
-    sessionStorage.removeItem('superadmin-department')
-    sessionStorage.removeItem('admin-department')
-    sessionStorage.removeItem('client-department')
-    sessionStorage.removeItem('user-department')
-    sessionStorage.removeItem('manager-department')
-
     this.Router.navigateByUrl("sign-in/signin", { replaceUrl: true })
   }
 

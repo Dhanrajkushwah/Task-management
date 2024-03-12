@@ -67,8 +67,8 @@ export class SigninComponent {
       this.form.controls['email'].setValue('superadmin@gmail.com');
       this.form.controls['password'].setValue('superadmin');
     } else if (data === 'Admin') {
-      this.form.controls['email'].setValue('admin@gmail.com');
-      this.form.controls['password'].setValue('admin');
+      this.form.controls['email'].setValue('kiaantechnology@gmail.com');
+      this.form.controls['password'].setValue('123456');
     }  else if (data === 'User') {
       this.form.controls['email'].setValue('user@gmail.com');
       this.form.controls['password'].setValue('user');

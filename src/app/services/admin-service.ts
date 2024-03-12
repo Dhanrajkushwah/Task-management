@@ -19,11 +19,21 @@ export class AdminService {
   getTask() {
     return this._http.get<any>(environment._api + "/api/task")
   }
-
+  addRating(data: any) {
+    return this._http.post<any>(environment._api + "/api/rating", data)
+  }
+  getRating() {
+    return this._http.get<any>(environment._api + "/api/rating")
+  }
   addCompanyRegistration(data: any) {
     return this._http.post<any>(environment._api + "/api/admin", data)
   }
-
+  addProfile(data: any) {
+    return this._http.post<any>(environment._api + "/api/admin", data)
+  }
+  getProfile() {
+    return this._http.get<any>(environment._api + "/api/admin/profile")
+  }
 }
 
 

@@ -86,19 +86,19 @@
 .fc-state-active,
 .fc-state-disabled {
 	background-color: $__primarycolor !important;
-	color: #fff !important;
+	color: white !important;
 	text-shadow: none !important;
 }
 .fc-cell-overlay {
 	background: #f0f0f0;
 }
 .fc-unthemed .fc-today {
-	background: #fff;
+	background: white;
 }
 .fc-event {
 	border-radius: 2px;
 	border: none;
-	color: #fff !important;
+	color: white !important;
 	cursor: move;
 	font-size: 13px;
 	margin: 1px 7px;

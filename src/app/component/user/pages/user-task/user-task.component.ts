@@ -5,11 +5,11 @@ import { Router } from '@angular/router';
 import { AdminService } from 'src/app/services/admin-service';
 
 @Component({
-  selector: 'app-task',
-  templateUrl: './task.component.html',
-  styleUrls: ['./task.component.scss']
+  selector: 'app-user-task',
+  templateUrl: './user-task.component.html',
+  styleUrls: ['./user-task.component.scss']
 })
-export class TaskComponent  {
+export class UserTaskComponent {
   displayedColumns: string[] = ['sno', 'name','time', 'category','subcategory','action' ];
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator)
@@ -29,7 +29,7 @@ export class TaskComponent  {
     this.dataSource.paginator = this.paginator;
   }
   addTask() {
-    this.route.navigate(["admin/add-task"])
+    this.route.navigate(["/user/addusertask"])
   }
 
   gettask() {

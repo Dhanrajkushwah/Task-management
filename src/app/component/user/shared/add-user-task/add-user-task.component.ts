@@ -4,37 +4,34 @@ import { Router } from '@angular/router';
 import { AdminService } from 'src/app/services/admin-service';
 
 @Component({
-  selector: 'app-add-task',
-  templateUrl: './add-task.component.html',
-  styleUrls: ['./add-task.component.scss']
+  selector: 'app-add-user-task',
+  templateUrl: './add-user-task.component.html',
+  styleUrls: ['./add-user-task.component.scss']
 })
-export class AddTaskComponent implements OnInit {
+export class AddUserTaskComponent implements OnInit {
   addTaskForm !: FormGroup;
   ckForm = false;
   removeClass = true;
   document!: File;
   imagesBox = '../../../../../../assets/img/product/product1.jpg'
-  admin_id
+  user_id
   companybyIdData: any
   constructor(
     private _fb: FormBuilder,
     private adminservice: AdminService,
     private _routes: Router,
   ) { 
-    this.admin_id = sessionStorage.getItem("admin_id");
+    this.user_id = sessionStorage.getItem("user_id");
 
   }
 
   ngOnInit(): void {
     this.addTaskForm = this._fb.group({
       title: ['', Validators.required],
-      category: ['', Validators.required],
-      subCategory: ['', Validators.required],
       taskTime:['', Validators.required],
-      price:['', Validators.required],
       description:['', Validators.required],
       descriptionFile:[''],
-      companyId:[this.admin_id],
+      userId:[this.user_id],
      
     });
    
@@ -70,14 +67,13 @@ export class AddTaskComponent implements OnInit {
       try {
         let formData = new FormData();
         formData.append('descriptionFile', this.document)
-        const arr = ['title', 'category', 'subCategory','taskTime','price','description','companyId']
+        const arr = ['title','taskTime','description','userId']
         for (let key of arr) {
           formData.append(key, this.addTaskForm.get(key)?.value)
         }
         this.adminservice.addTask(formData).subscribe({
           next: (res) => {
-      
-              this._routes.navigate(['/admin/task'])
+              this._routes.navigate(['/user/usertask'])
      
           },
           error: (err) => {
@@ -99,7 +95,7 @@ export class AddTaskComponent implements OnInit {
     this.removeClass = !this.removeClass;
   }
   cancel(){
-    this._routes.navigate(['/admin/task'])
+    this._routes.navigate(['/user/usertask'])
 
   }
 }

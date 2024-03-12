@@ -31,7 +31,7 @@ export class ChartNg2Component {
       {
         data: [14, 12, 34, 25, 24, 20],
         label: 'Sales',
-        backgroundColor: '#ffff',
+        backgroundColor: 'whitef',
         borderColor: 'black',
         borderWidth: 1,
       },

@@ -12,31 +12,12 @@
     'd-flex justify-content-between align-items-center header-block': changeLayout === '3', 'sidebar-cls-two' : changeLayout !== '3'  }">
       <div (mouseover)="miniSideBarMouseHover('over')" (mouseout)="miniSideBarMouseHover('out')" class="header-left"
         [class.active]="miniSidebar === false" *ngIf="activePath !== 'pos'">
-        <a [routerLink]="routes.dashboard" class="logo">
-          <img src="assets/img/doctor.png"  style="background-color: white;" alt="" />
-        </a>
-        <a [routerLink]="routes.dashboard" class="logo-small">
-          <img src="assets/img/logo.png" alt="" />
-        </a>
-
+        <br>
         <a (click)="toggleSidebar()" id="toggle_btn" href="javascript:void(0);"
           *ngIf="changeLayout === '1' || changeLayout === '3'" [class.active]="miniSidebar === true">
           <i data-feather="chevrons-left" class="feather-16"></i>
         </a>
       </div>
-      <!-- <div class="header-left active" *ngIf="activePath === 'pos'">
-      <a [routerLink]="routes.dashboard" class="logo logo-normal">
-        <img src="assets/img/logo.jpg" alt="" />
-      </a>
-      <a [routerLink]="routes.dashboard" class="logo logo-white">
-        <img src="assets/img/logo-white.png" alt="" />
-      </a>
-      <a [routerLink]="routes.dashboard" class="logo-small">
-        <img src="assets/img/logo-small.png" alt="" />
-      </a>
-    </div> -->
-
-
       <a id="mobile_btn" class="mobile_btn" (click)="togglesMobileSideBar()" *ngIf="activePath !== 'pos'">
         <span class="bar-icon">
           <span></span>
@@ -55,20 +36,19 @@
         style="float: right;margin-right: 25px; color: white;">
         <mat-icon>more_vert</mat-icon>
       </button>
-      
       <mat-menu #menu="matMenu">
-        <button mat-menu-item >
+        <button mat-menu-item>
           <img class="avatar" [src]="img" alt="Profile Image" />
-          <span> Company Name </span>
+          <span> {{name}} </span>
         </button>
-        <button mat-menu-item routerLink="/super-admin/myprofile">
+        <!-- <button mat-menu-item routerLink="/super-admin/myprofile">
           <mat-icon>supervisor_account</mat-icon>
           <span>My Profile</span>
         </button>
         <button mat-menu-item routerLink="/super-admin/changepassword">
           <mat-icon>vpn_lock</mat-icon>
           <span>Change Password</span>
-        </button>
+        </button> -->
         <button mat-menu-item (click)="logouts()">
           <mat-icon>logout</mat-icon>
           <span>Logout</span>

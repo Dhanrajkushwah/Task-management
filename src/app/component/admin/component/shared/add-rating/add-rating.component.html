@@ -1,0 +1,26 @@
+<div class="page-header">
+    <div class="page-title">
+      <h4> Add Task</h4>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="addRatingForm">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 col-12">
+            <div class="form-group">
+              <label>Rating</label>
+              <input type="text" formControlName="rating" placeholder="Enter Rating" />
+              <small *ngIf="addRatingForm.controls['rating'].errors && ckForm" class="text-danger">Enter Your Rating
+              </small>
+            </div>
+          </div>
+        </div>
+            <button type="submit" class="btn btn-submit me-2" (click)="onSubmit()">
+              Submit
+            </button>
+            <a class="btn btn-cancel" (click)="cancel()">Cancel</a>
+      </form>
+    </div>
+  </div>
