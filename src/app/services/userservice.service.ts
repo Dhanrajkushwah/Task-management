@@ -13,4 +13,8 @@ export class UserserviceService {
   addUser(data: any) {
     return this._http.post<any>(environment._api + "/api/user", data)
   }
+  getUserTask(id:any){
+    return this._http.get<any>(environment._api + "/api/task/" + id)
+
+  }
 }

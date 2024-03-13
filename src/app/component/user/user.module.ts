@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UserPopupComponent } from './components/shared/user-popup/user-popup.component';
 import { TotalTaskComponent } from './pages/total-task/total-task.component';
 import { UserTaskViewComponent } from './pages/user-task-view/user-task-view.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { UserTaskViewComponent } from './pages/user-task-view/user-task-view.com
     CommonLayoutComponent,
     CommonSidebarOneComponent,
     ReactiveFormsModule,
+    MatButtonModule
 
   ]
 })

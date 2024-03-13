@@ -9,37 +9,95 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
+        <div class="col-6">
             <div class="card table-card">
                 <div class="card-header card-body table-border-style">
                     <div class="row">
-                        <div class="col-12">
-                            Task Name :-
+                        <div class="col-12 design">
+                            Task Name :- {{taskName}}
                         </div>
                     </div>
                     <br>
                     <br>
                     <div class="row">
-                        <div class="col-12">
-                            Task Time :-
+                        <div class="col-12 ui">
+                            Task Time :- {{taskTime}}
                         </div>
                     </div>
                     <br>
                     <br>
                     <div class="row">
-                        <div class="col-12">
-                            Task Description :-
+                        <div class="col-12 ui">
+                            Task Description :- {{taskDescription}}
                         </div>
                     </div>
                     <br>
                     <br>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 ui">
                             Task Document File :-
+                            <button mat-icon-button matTooltip="Click to Download File" (click)="pdf()"
+                                class="iconbutton" color="primary">
+                                <mat-icon aria-label="View">cloud_download</mat-icon>
+                            </button>
                         </div>
                     </div>
                     <br>
                     <br>
+                    <button class="btn btn-submit" (click)="cancel()">Ok</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card table-card">
+                <div class="card-header card-body table-border-style">
+                    <p class="design">User Upload Task</p>
+                    <form [formGroup]="addTaskForm">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Tittle</label>
+                                    <input type="text" formControlName="title" placeholder="Enter Tittle" />
+                                    <small *ngIf="addTaskForm.controls['title'].errors && ckForm"
+                                        class="text-danger">Enter Your Tittle
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Task Time</label>
+                                    <input type="text" formControlName="taskTime" placeholder="Enter Task Time" />
+                                    <small *ngIf="addTaskForm.controls['taskTime'].errors && ckForm"
+                                        class="text-danger">Enter Your Task Time
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Document Upload (optional)</label>
+                                    <input type="file" (change)="Onupload($event)" class="form-control"
+                                        formControlName="descriptionFile" placeholder="Enter Document File" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" col-12">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea type="text" formControlName="description" placeholder="Enter Description"
+                                        rows="10"></textarea>
+                                    <small *ngIf="addTaskForm.controls['description'].errors && ckForm"
+                                        class="text-danger">Enter Your Description
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-submit me-2" (click)="onSubmit()">
+                            Submit
+                        </button>
+                        <a class="btn btn-cancel" (click)="cancel()">Cancel</a>
+
+                    </form>
                 </div>
             </div>
         </div>

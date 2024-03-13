@@ -80,14 +80,6 @@ export class AddUserTaskComponent implements OnInit {
         console.log(e)
       }
     }
-
-
-
-  }
-
-
-  removeBtn() {
-    this.removeClass = !this.removeClass;
   }
   cancel(){
     this._routes.navigate(['/user/usertask'])
