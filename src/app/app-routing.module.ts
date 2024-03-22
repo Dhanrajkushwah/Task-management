@@ -4,7 +4,7 @@ import { LoginGuard , } from './auth/guard/admin/login.guard';
 
 const routes: Routes = [
 { path : "",
- redirectTo : 'sign-in',
+ redirectTo : 'user',
   pathMatch : 'full'
 
 },
@@ -26,11 +26,16 @@ const routes: Routes = [
   {
     path : 'user',
     loadChildren : ()=> import('./component/user/user.module').then((u)=>u.UserModule),
-    canActivate : [LoginGuard]
+    //canActivate : [LoginGuard]
   },
 
   {
     path : 'sign-in',
+    loadChildren : ()=> import('./auth/auth.module').then((c)=>c.AuthModule),
+ 
+  },
+  {
+    path : 'usersignin',
     loadChildren : ()=> import('./auth/auth.module').then((c)=>c.AuthModule),
  
   },

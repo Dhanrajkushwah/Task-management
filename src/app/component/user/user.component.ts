@@ -11,6 +11,18 @@ import { SettingsService ,SidebarService } from 'src/app/core/core.index';
 import { WebstorgeService } from 'src/app/shared/webstorge.service';
 // import { url } from '../shared/model/sidebar.model';
 import { url } from 'src/app/shared/model/sidebar.model';
+import { MatDialog } from '@angular/material/dialog';
+import { UserPopupComponent } from './components/shared/user-popup/user-popup.component';
+
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  category: string;
+  servicename: string;
+}
+
+
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -24,13 +36,30 @@ export class UserComponent {
   public miniSidebar = false;
   public expandMenu = false;
   public mobileSidebar = false;
+  
+ PeriodicElement= [
+    {position: 1, name: 'Hydrogen', category: 'Instagram', servicename: 'Regular Instagram Followers - [ Bollywood Choice ] Regular Instagram Followers - [ Bollywood Choice ]'},
+    {position: 2, name: 'Helium', category: 'facebook', servicename: 'Regular Instagram Followers - [ Bollywood Choice ] Regular Instagram Followers - [ Bollywood Choice ]'},
+    {position: 3, name: 'Lithium', category: 'twiter', servicename: 'Regular Instagram Followers - [ Bollywood Choice ] Regular Instagram Followers - [ Bollywood Choice ]'},
+    {position: 4, name: 'Beryllium', category: 'youtube', servicename: 'Regular Instagram Followers - [ Bollywood Choice ] Regular Instagram Followers - [ Bollywood Choice ]'},
+    {position: 5, name: 'Boron', category: 'spotify', servicename: 'Regular Instagram Followers - [ Bollywood Choice ] Regular Instagram Followers - [ Bollywood Choice ]'},
+    {position: 6, name: 'Carbon', category: 'comapany', servicename: 'Regular Instagram Followers - [ Bollywood Choice ] Regular Instagram Followers - [ Bollywood Choice ]'},
+    {position: 7, name: 'Nitrogen', category: 'game', servicename: 'Regular Instagram Followers - [ Bollywood Choice ] Regular Instagram Followers - [ Bollywood Choice ]'},
+    {position: 8, name: 'Oxygen', category: 'task', servicename: 'Regular Instagram Followers - [ Bollywood Choice ] Regular Instagram Followers - [ Bollywood Choice ]'},
+    {position: 9, name: 'Fluorine', category: 'snapchat', servicename: 'Regular Instagram Followers - [ Bollywood Choice ] Regular Instagram Followers - [ Bollywood Choice ]'},
+    {position: 10, name: 'Neon', category: 'indeed', servicename: 'Regular Instagram Followers - [ Bollywood Choice ] Regular Instagram Followers - [ Bollywood Choice ]'},
+  ];
   base = '';
   page = '';
+  userData:any[]=[];
+
+  
   constructor(
     private Router: Router,
     private settings: SettingsService,
     private auth: WebstorgeService,
-    private sidebar: SidebarService
+    private sidebar: SidebarService,
+    public dialog: MatDialog
   ){
     this.activePath = this.Router.url.split('/')[2];
     this.getRoutes(this.Router);
@@ -119,6 +148,12 @@ export class UserComponent {
       this.auth.Logout();
     }
   }
-
+  openDialog() {
+    this.dialog.open(UserPopupComponent);
+  }
   
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    //this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 }

@@ -8,43 +8,48 @@ import { TotalTaskComponent } from './pages/total-task/total-task.component';
 import { UserTaskViewComponent } from './pages/user-task-view/user-task-view.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
-    path: '',
-    component: UserComponent,
-    children: [
-      {
-        path: 'dashboard',
-        loadChildren: () =>
-          import('../../core-component/dashboard/dashboard.module').then((m) => m.DashboardModule),
-      },
-      {
-        path: 'seviceslist',
-        component: ServicesListComponent
-      }
-      ,
-      {
-        path: 'usertask',
-        component: UserTaskComponent
-      }
-      ,
-      {
-        path: 'addusertask',
-        component: AddUserTaskComponent
-      }
-      ,
-      {
-        path: 'totaltask',
-        component: TotalTaskComponent
-      }
-      ,
-      {
-        path: 'usertaskview',
-        component: UserTaskViewComponent
-      }
-      
-    ],
+    path : '',
+    component : UserComponent
   },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('../../core-component/dashboard/dashboard.module').then((m) => m.DashboardModule),
+  },
+  {
+    path: 'seviceslist',
+    component: ServicesListComponent
+  }
+  ,
+  {
+    path: 'usertask',
+    component: UserTaskComponent
+  }
+  ,
+  {
+    path: 'addusertask',
+    component: AddUserTaskComponent
+  }
+  ,
+  {
+    path: 'totaltask',
+    component: TotalTaskComponent
+  }
+  ,
+  {
+    path: 'usertaskview',
+    component: UserTaskViewComponent
+  }
+  // { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  // {
+  //   path: '',
+  //   component: UserComponent,
+  //   children: [
+      
+      
+  //   ],
+  // },
 ];
 
 @NgModule({

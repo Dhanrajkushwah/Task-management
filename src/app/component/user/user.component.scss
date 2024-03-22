@@ -1,0 +1,61 @@
+::placeholder {
+    color: rgb(8, 8, 8) !important;
+}
+
+.table-rounded {
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+}
+
+.dropdown-menu li {
+    position: relative;
+}
+
+.dropdown-menu .dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+}
+
+.dropdown-menu .dropdown-submenu-left {
+    right: 100%;
+    left: auto;
+}
+
+// .dropdown-menu>li:hover>.dropdown-submenu {
+//     display: block;
+// }
+
+
+
+@media screen and (max-width: 767px) {
+.RECOMMENDING {
+display: none;
+}
+}
+
+@media screen and (max-width: 767px) {
+.freelancer11 {
+display: none;
+}
+}
+ .header-section{
+    width: 100%;
+    background-image: url('../../../assets/img/banner\ \(1\).svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+ }
+
+.Custom_Enterprise{
+  width: 100%;
+  background-image: url(https://res.cloudinary.com/gurucom/image/upload/f_auto,b_rgb:2b3247/static/homepage/enterprise-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+ 
+}
+

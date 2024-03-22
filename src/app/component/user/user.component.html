@@ -1,4 +1,4 @@
-<div 
+<!-- <div 
   [ngClass]="{
     'expand-menu': miniSidebar === true && expandMenu === true ,
     'mini-sidebar': miniSidebar === true,
@@ -6,7 +6,7 @@
     'slide-nav': mobileSidebar === true
   }"
 >
-  <!-- Main Wrapper -->
+  
   <div class="main-wrapper" [ngClass]="{ dark: darkTheme }">
     
     <app-common-header></app-common-header>
@@ -31,11 +31,597 @@
             <router-outlet></router-outlet>
           </div>
         </div>
-        <!-- Main Wrapper -->
+       background-image: url('../../../assets/img/banner\ \(1\).svg');
       </div>
     </div>
     <app-common-layout></app-common-layout>
-    <!-- <app-layout></app-layout> -->
+    <router-outlet></router-outlet>
+   
   </div>
-  <!-- Main Wrapper -->
+
+</div -->
+
+<body>
+  <!-- Strat Fast Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img
+          src="https://png.pngtree.com/png-vector/20220503/ourmid/pngtree-logo-teamwork-people-human-colorful-design-vector-illustration-company-freelancer-vector-png-image_22083806.png"
+          class="img-fluid" style="width: 80px" alt="" /></a>
+      <span class="RECOMMENDING" style="font-size: 18px; font-weight: 600">10+ YEARS RECOMMENDING SOFTWARE
+      </span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mx-5" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-4"></ul>
+        <form class="d-flex" role="search">
+          <ul class="navbar-nav mx-auto">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="font-weight: 800;" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Pro
+              </a>
+              <ul class="dropdown-menu shadow border-0 ">
+                <li><a style="font-weight: 600;" class="dropdown-item" href="#">I am looking to hlre</a></li>
+                <li><a style="font-weight: 600;" class="dropdown-item" href="#">i want to offer Pro Sew</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item mx-2">
+              <!-- <a class="nav-link" href="#" style="font-weight: 800">
+                     English <i class="fa-sharp fa-solid fa-chevron-down"></i></a> -->
+              <select class="mt-2 border-0 " style="font-weight: 600;" name="cars" id="cars">
+                <option value="volvo"> English <i class="fa-sharp fa-solid fa-chevron-down"></i></option>
+                <option value="saab">hindi</option>
+
+              </select>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#" style="font-weight: 800">
+                The Best Selling Option</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#" style="font-weight: 800" routerLink="/sign-in/signin">Sign In</a>
+            </li>
+            <button type="button" class="btn btn-outline-success">Join</button>
+
+          </ul>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!--End Fast Navbar -->
+
+  <!-- start header section  -->
+  <section class="header-section">
+    <div class="container-fluid px-5 py-5 pt-0">
+      <div class="row px-5 py-5 pt-0 pb-0">
+        <div class="col-sm-6 col-md-8">
+          <h1 class="text-light mt-5" style="line-height: 1.4; font-size: 50px;">Find & Hire <br>
+            Expert Freelancers</h1>
+          <p class="text-light mt-2">Work with the best freelance talent from around the world on our secure,
+            flexible and cost-effective platform.</p>
+          <hr style="width: 100px; border: 2px solid rgb(0, 89, 255);">
+
+          <div class="input-group mb-3 w-75">
+            <input type="text" class="form-control py-2  " placeholder="What Skill are you Looking For?"
+              aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+          <div class="btn m-0 p-0">
+            <button style="font-size: 14px;" type="button" class="btn btn-outline-primary  text-light mt-2">Web
+              development</button>
+            <button style="font-size: 14px;" type="button" class="btn btn-outline-primary  text-light mt-2 mx-1">Logo
+              Design</button>
+            <button style="font-size: 14px;" type="button"
+              class="btn btn-outline-primary  text-light mt-2 mx-1">WordPress</button>
+            <button style="font-size: 14px;" type="button" class="btn btn-outline-primary  text-light mt-2 mx-1">Ionic
+              Development</button>
+          </div>
+
+
+          <p style="visibility: hidden;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit odio, dolores
+            iste accusantium vel praesentium maxime amet reprehenderit et beatae ipsam aliquid quo, quam hic commodi
+            quia aspernatur omnis expedita.</p>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="freelancer11 mt-5">
+            <img src="../../../assets/img/freelancer-guy.jpg" class="img-fluid rounded-3 mt-3 mb-4" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End header section  -->
+
+  <!-- start  services section  -->
+  <div class="container-fluid px-5 py-5 mb-3">
+    <div class="row px-5 py-5 pt-0 pb-0">
+        <!-- <div class="row mt-4">
+            <div class="col-md-5 dropdown mt-2">
+                <button class="btn btn-secondary dropdown-toggle px-5 border-0 rounded-4" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:   rgb(102, 102, 230); color:white;" [matMenuTriggerFor]="animals">
+              Select Services
+                </button>
+                <mat-menu #animals="matMenu">
+                  <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+                  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+                </mat-menu>
+                <mat-menu #vertebrates="matMenu">
+                  <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+                  <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+                  <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+                  <button mat-menu-item>Birds</button>
+                  <button mat-menu-item>Mammals</button>
+                </mat-menu>
+                
+                <mat-menu #invertebrates="matMenu">
+                  <button mat-menu-item>Insects</button>
+                  <button mat-menu-item>Molluscs</button>
+                  <button mat-menu-item>Crustaceans</button>
+                  <button mat-menu-item>Corals</button>
+                  <button mat-menu-item>Arachnids</button>
+                  <button mat-menu-item>Velvet worms</button>
+                  <button mat-menu-item>Horseshoe crabs</button>
+                </mat-menu>
+                
+                <mat-menu #fish="matMenu">
+                  <button mat-menu-item>Baikal oilfish</button>
+                  <button mat-menu-item>Bala shark</button>
+                  <button mat-menu-item>Ballan wrasse</button>
+                  <button mat-menu-item>Bamboo shark</button>
+                  <button mat-menu-item>Banded killifish</button>
+                </mat-menu>
+                
+                <mat-menu #amphibians="matMenu">
+                  <button mat-menu-item>Sonoran desert toad</button>
+                  <button mat-menu-item>Western toad</button>
+                  <button mat-menu-item>Arroyo toad</button>
+                  <button mat-menu-item>Yosemite toad</button>
+                </mat-menu>
+                
+                <mat-menu #reptiles="matMenu">
+                  <button mat-menu-item>Banded Day Gecko</button>
+                  <button mat-menu-item>Banded Gila Monster</button>
+                  <button mat-menu-item>Black Tree Monitor</button>
+                  <button mat-menu-item>Blue Spiny Lizard</button>
+                  <button mat-menu-item disabled>Velociraptor</button>
+                </mat-menu>
+            </div>
+
+
+            <div class="col-md-7 dropdown mt-2">
+                <input class="form-control" type="search" (keyup)="applyFilter($event)" placeholder="Search Services"
+                    style="background-color: rgb(102, 102, 230); color:white">
+
+            </div>
+        </div> -->
+        <div class="row mt-4">
+          <div class="col-md-5 dropdown mt-2">
+              <button class="btn btn-secondary dropdown-toggle px-5 border-0 rounded-4" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:  rgb(102, 102, 230); color:white;">
+            Select Services
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">All</a></li>
+                <li><a class="dropdown-item" href="#">Instagram Followers</a></li>
+                <li><a class="dropdown-item" href="#">Instagram Likes</a></li>
+                <li><a class="dropdown-item" href="#">Instagram India</a></li>
+                <li><a class="dropdown-item" href="#">Instagram Views</a></li>
+              </ul>
+          </div>
+
+
+          <div class="col-md-7 dropdown mt-2">
+              <input class="form-control" type="search" (keyup)="applyFilter($event)" placeholder="Search Services"
+                  style="background-color: rgb(102, 102, 230); color:white">
+
+          </div>
+      </div>
+        <div class="row mt-4  table-rounded">
+            <div class="table-responsive ">
+
+            <table class="table table-striped">
+                <thead class=" border" style="background-color: rgb(102, 102, 230); color:white">
+                    <tr class="bf-info text-center">
+                        <th scope="col" style="white-space: nowrap;">Service Name</th>
+                        <th scope="col" style="white-space: nowrap;">Service Description</th>
+                         <th scope="col">Created</th>
+                        <th scope="col">Reward</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr *ngFor="let user of PeriodicElement">
+                        <td>{{user.category}}</td>
+                        <td><span style="font-size: 12px; white-space: nowrap;">{{user.servicename}}</span><span class="bg-info text-light border-light rounded-4  px-2 mx-3" style="font-size: 12px;">preview</span></td>
+                         <td style="white-space: nowrap;">1 day ago</td>
+                        <td>₹50.40 </td>
+                        <td><button (click)="openDialog()" class="bg-info text-light border-light rounded-4 px-4" style="white-space: nowrap;">Accept Work</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        </div>
+    </div>
 </div>
+  <!-- End services section  -->
+<hr>
+<!-- start Get Work Done  -->
+<section>
+  <div class="container-fluid px-5 py-5">
+    <div class="row px-5 py-5 pt-0 pb-0 mb-4 ">
+      <h1 class="text-center mb-4">It's Easy to Get Work Done on <span style="color: #005ea6;">kiaan technology Pvt Ltd</span></h1>
+     
+  <div class="col-md-3 mt-2">
+    <div class="card h-100  shadow rounded-5">
+      <div class="card-body">
+        <div class="text-center ">
+          <i style="font-size: 35px;" class="fa-sharp fa-light fa-address-card text-primary  mt-2"></i>
+          <h3>Post a Job</h3>
+          <p>Create your free job posting and start receiving Quotes within hours.</p>
+        </div>
+      </div>
+    </div>
+  
+    
+  </div>
+  <div class="col-md-3 mt-2">
+    <div class="card h-100 shadow rounded-5">
+      <div class="card-body">
+        <div class="text-center ">
+          <i style="font-size: 35px;" class="fa-light fa-computer-speaker text-primary mt-2"></i>
+          <h3>Hire Freelancers</h3>
+          <p>Compare the Quotes you receive and hire the best freelance professionals for the job.</p>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  <div class="col-md-3 mt-2">
+    <div class="card h-100 shadow rounded-5">
+      <div class="card-body">
+        <div class="text-center ">
+          <i style="font-size: 35px;" class="fa-regular fa-memo-circle-check text-primary  mt-2"></i> 
+          <h3>Get Work Done</h3>
+          <p>Decide on how and when payments will be made and use WorkRooms to collaborate, communicate and track work.</p>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  <div class="col-md-3 mt-2">
+    <div class="card h-100 shadow rounded-5 ">
+      <div class="card-body">
+        <div class="text-center ">
+      
+          <i style="font-size: 35px;" class="fa-sharp fa-regular fa-file-invoice text-primary  mt-2"></i> 
+    
+      
+        <h3>Make Secure Payments</h3>
+        <p>Choose from multiple payment methods with SafePay payment protection.</p>
+      </div>
+      </div>
+    </div>
+  
+  </div>
+  <div class="mt-3 text-center ">
+    <button type="button" class="btn btn-outline-info" style="display: inline-block;
+    background: #005ea6;
+    border: 1px solid #005ea6;
+    opacity: .9;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    line-height: 1.4;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: opacity .2s ease;">See How Guru Works</button>
+  </div>
+    </div>
+  </div>
+</section>
+<!--End Get Work Done  -->
+
+ <!-- star Work Your Way   section -->
+
+<section style="background-color:#f7f7f7;;">
+  <div class="container-fluid px-5 py-5">
+    <div class="row px-5 py-5 pt-0 pb-0">
+      <h1 style="font-size: 30px;  font-weight: 500;" class="text-center mt-3 mb-3">Work Your Way</h1>
+      <div class="col-md-6">
+        <div class="img">
+          <img src="https://res.cloudinary.com/gurucom/image/upload/f_auto,w_520,b_rgb:f7f7f7/static/homepage/workyourway_2x_xjysgy.jpg" class="img-fluid " alt="">
+        </div>
+      </div>
+      <div class="col-md-6">
+      
+        <h4 class="mx-2" style="font-size: 18px;  font-weight: 600;">Choose from four Payment terms and create Agreements.</h4>
+
+        <div class="d-flex justify-content-center ">
+          <div>
+            <i class="fa-thin fa-circle-play mt-3 mx-2" style="font-weight: 700;  font-size: 20px;"></i>
+          </div>
+          <div>
+            <h4> Fixed Price</h4>
+            <p style="font-size: 15px; font-weight: 500;" class="text-secondary ">Set a total fixed cost for your job and create milestones to ensure you're satisfied every step of the way. Set a due date and the amount to be paid for each milestone.</p>
+          </div>
+        
+        </div>
+        <div class="d-flex justify-content-center ">
+          <div>
+            <i class="fa-thin fa-circle-play mt-3 mx-2" style="font-weight: 700;  font-size: 20px;"></i>
+          </div>
+          <div>
+            <h4> Hourly</h4>
+            <p style="font-size: 15px; font-weight: 500;" class="text-secondary ">Track progress with ease and pay Freelancers by the hour using our Time Tracker software. If you hire multiple Freelancers for your job, you'll receive a breakdown of each Freelancer's hourly rate and time tracked.</p>
+          </div>
+        
+        </div>
+        <div class="d-flex justify-content-center ">
+          <div>
+            <i class="fa-thin fa-circle-play mt-3 mx-2" style="font-weight: 700;  font-size: 20px;"></i>
+          </div>
+          <div>
+            <h4> Task-Based</h4>
+            <p style="font-size: 15px; font-weight: 500;" class="text-secondary">Pay for a single completed online freelance task, however big or small. Create and assign tasks as needed and generate invoice for each task once it is completed</p>
+          </div>
+        
+        </div>
+        <div class="d-flex justify-content-center ">
+          <div>
+            <i class="fa-thin fa-circle-play mt-3 mx-2" style="font-weight: 700;  font-size: 20px;"></i>
+          </div>
+          <div>
+            <h4> Recurring Payment</h4>
+            <p style="font-size: 15px; font-weight: 500;" class="text-secondary">Easily pay your go-to Freelancers on an ongoing basis. Set up to four recurring payment rules for any given job - pay every week, every other week, every month, or every quarter. Stop or resume payments at any point with just a click of a button.</p>
+          </div>
+        
+        </div>
+        <div class="mt-3 mx-4 mb-5">
+          <button type="button" class="btn btn-outline-info" style="display: inline-block;
+          background: #005ea6;
+          border: 1px solid #005ea6;
+          opacity: .9;
+          border-radius: 5px;
+          cursor: pointer;
+          color: #fff;
+          padding: 1rem 1.5rem;
+          text-align: center;
+          text-decoration: none;
+          vertical-align: middle;
+          line-height: 1.4;
+          font-size: 1rem;
+          font-weight: 500;
+          white-space: nowrap;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          transition: opacity .2s ease;">Learn About Agreements</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- end Work Your Way   section -->
+
+  <!-- services section start  -->
+ 
+   <!-- services section start  -->
+
+<!-- start  Software Categories   -->
+<section>
+  <div class="container-fluid px-5 py-5">
+    <div class="row">
+      <h2 style="font-weight: 400" class="text-center">
+        Software Categories
+      </h2>
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-4">
+        <hr style="border: 1px rgb(145, 145, 145) dashed" />
+        <div class="d-flex justify-content-start">
+          <i class="fa-light fa-star text-info mt-1 mx-2"></i>
+          <p style="font-size: 18px">
+            <span style="font-weight: 500">CRM</span> Software
+          </p>
+        </div>
+        <hr style="line-height: 0.2; border: 1px rgb(145, 145, 145) dashed" />
+      </div>
+      <div class="col-md-4">
+        <hr style="border: 1px rgb(145, 145, 145) dashed" />
+        <div class="d-flex justify-content-start">
+          <i class="fa-duotone fa-megaphone text-info mt-1 mx-2"></i>
+          <p style="font-size: 18px">
+            <span style="font-weight: 500">Marketing Automation </span> Software
+          </p>
+        </div>
+        <hr style="border: 1px rgb(145, 145, 145) dashed" />
+      </div>
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-4">
+        <hr style="border: 1px rgb(145, 145, 145) dashed" />
+        <div class="d-flex justify-content-start">
+          <i class="fa-regular fa-envelope text-info mt-1 mx-2"></i> 
+          <p style="font-size: 18px">
+            <span style="font-weight: 500">Email Marketing </span> Software
+          </p>
+        </div>
+        <hr style="line-height: 0.2; border: 1px rgb(145, 145, 145) dashed" />
+      </div>
+      <div class="col-md-4">
+        <hr style="border: 1px rgb(145, 145, 145) dashed" />
+        <div class="d-flex justify-content-start">
+          <i class="fa-regular fa-business-time text-info mt-1 mx-2"></i>
+          <p style="font-size: 18px">
+            <span style="font-weight: 500">Business Intelligence </span> Software
+          </p>
+        </div>
+        <hr style="border: 1px rgb(145, 145, 145) dashed" />
+      </div>
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-4">
+        <hr style="border: 1px rgb(145, 145, 145) dashed" />
+        <div class="d-flex justify-content-start">
+          <i class="fa-regular fa-display-chart-up-circle-dollar text-info mt-1 mx-2"></i>
+            <span style="font-weight: 500">Social Media Marketing </span> Software
+
+        </div>
+        <hr style="line-height: 0.2; border: 1px rgb(145, 145, 145) dashed" />
+      </div>
+      <div class="col-md-4">
+        <hr style="border: 1px rgb(145, 145, 145) dashed" />
+        <div class="d-flex justify-content-start">
+          <i class="fa-regular fa-business-time text-info mt-1 mx-2"></i>
+          <p style="font-size: 18px">
+            <span style="font-weight: 500">Survey </span> Software
+          </p>
+        </div>
+        <hr style="border: 1px rgb(145, 145, 145) dashed" />
+      </div>
+      <div class="col-md-2">
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--End Software Categories   -->
+
+<!--start Custom Enterprise -->
+<section class="Custom_Enterprise">
+  <div class="container-fluid px-5 py-5 pt-0 pb-2">
+    <div class="row px-5 py-5 pt-0 pb-0">
+<div class="col-md-3 justify-content-center">
+  <h4 class="text-light mt-4 justify-content-center" style="justify-content-center "> <span style="color: #005ea6;">Kiaan </span> <br/> Technology Pvt Ltd
+  </h4>
+</div>
+<div class="col-md-9">
+  <h1 class="mt-4 text-light " style="font-size: 20px; font-weight: 500;">Custom Enterprise Solutions for Your Business.</h1>
+  <ul class="list-unstyled ">
+    <li class="text-light mb-2 mx-3" style="font-size: 20px;"> <i class="fa-solid fa-screwdriver-wrench text-secondary" style="font-size: 20px;"></i> Custom Built Solutions</li>
+    <li  class="text-light mb-2 mx-3"><i class="fa-regular fa-shield-check text-secondary"  style="font-size: 20px;"></i> Compliance & Security Benefits</li>
+    <li  class="text-light mb-2 mx-3"><i class="fa-solid fa-hand-holding-heart text-secondary"  style="font-size: 20px;"></i> Industry Lowest Fees</li>
+  </ul>
+</div>
+    </div>
+  </div>
+</section>
+
+<!--End Custom Enterprise -->
+
+    <!-- footer-start -->
+    <div class="container-fluid">
+      <div class="conyainer"></div>
+    </div>
+    <!-- footer-end -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="">
+              <img
+                src="https://kiaantechnology.com/images/NCT%201.png"
+                style="height: 70px; width: 70px"
+                alt=""
+              />
+            </div>
+            <ul class="list-unstyled">
+              <p>
+                kiaantechnology is an award-winning performance marketing
+                agency. We deliver transformational growth for our clients
+                through digital excellence
+              </p>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Company</h5>
+            <ul class="list-unstyled">
+              <li><a class="text-light" href="#">About Us</a></li>
+              <li><a class="text-light" href="#">Vission and Mission</a></li>
+              <li><a class="text-light" href="#">Portfolio</a></li>
+              <li><a class="text-light" href="#">Contact Us</a></li>
+              <li><a class="text-light" href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Our Services</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-light" href="#">Digital Marketing Services</a>
+              </li>
+              <li><a class="text-light" href="#">SEO Services</a></li>
+              <li>
+                <a class="text-light" href="#"
+                  >Website Designing & Development</a
+                >
+              </li>
+              <li><a class="text-light" href="#">Content Marketing</a></li>
+              <li>
+                <a class="text-light" href="#">Online Reputation Management</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Contact Us</h5>
+            <p>
+              07,Vishal Nagar Annapurna Main Rd, <br />
+              Near Prateek Bridge, Indore <br />Madhya Pradesh, 452012<br />Phone:
+              +91-9752100980<br />Email: info@kiaantechnology.com
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; 2024 kiaantechnology. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-inline text-md-end">
+              <li class="list-inline-item">
+                <a class="text-light" href="#"
+                  ><i class="fa-brands fa-square-facebook fs-4"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="text-light" href="#"
+                  ><i class="fa-brands fa-square-twitter fs-4"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="text-light" href="#"
+                  ><i class="fa-brands fa-square-instagram fs-4"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="text-light" href="#"
+                  ><i class="fa-brands fa-linkedin fs-4"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
